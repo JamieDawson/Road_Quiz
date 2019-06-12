@@ -18,5 +18,5 @@ capsule-info {
   action-fg-color (#443D32)
   android-app-id (myActionId)
   developer-name (My Awesome Company)
-  icon-asset (/images/icons/car.png)
+  icon-asset (images/icon_for_app/iconForTest.png) //new way of getting icon.
 }
