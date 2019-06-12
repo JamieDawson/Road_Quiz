@@ -9,14 +9,14 @@ capsule-info {
     keyword (car)
     keyword (test)
   }
-  dispatch-name (Prepare for Driving Test)
+  dispatch-name (Prepare for Driving Test) //Should be unique enough.
   dispatch-aliases {
-    alias ()
-    alias (tips calculator)
+    alias (Driving exam)
+    alias (Drivers test)
   }
   action-bg-color (#FFC50A)
   action-fg-color (#443D32)
-  android-app-id (myActionId)
-  developer-name (My Awesome Company)
+ // android-app-id () //I don't think I need this.
+  developer-name (Jamie Dawson)
   icon-asset (images/icon_for_app/iconForTest.png) //new way of getting icon.
 }
