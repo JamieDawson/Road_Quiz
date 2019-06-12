@@ -1,0 +1,22 @@
+// resources/en/capsule-info.bxb
+capsule-info {
+  display-name (Prepare for the Driving Test)
+  description (A quiz filled with questions you'll get on your drivers test. Great for practicing!)
+  //privacy-policy-url (http://my-capsule.com/en/privacy-policy)
+  //terms-url (http://my-capsule.com/en/TandC)
+  search-keywords {
+    keyword (driving)
+    keyword (car)
+    keyword (test)
+  }
+  dispatch-name (Prepare for Driving Test)
+  dispatch-aliases {
+    alias ()
+    alias (tips calculator)
+  }
+  action-bg-color (#FFC50A)
+  action-fg-color (#443D32)
+  android-app-id (myActionId)
+  developer-name (My Awesome Company)
+  icon-asset (/images/icons/car.png)
+}

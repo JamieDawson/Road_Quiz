@@ -1,0 +1,7 @@
+hints {
+  uncategorized {
+    utterance (Start the exam)
+    utterance (Let's begin the exam)
+    utterance (I would like to start the exam)
+  }
+}
