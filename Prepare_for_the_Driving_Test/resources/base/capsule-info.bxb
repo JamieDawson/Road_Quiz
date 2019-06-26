@@ -1,6 +1,6 @@
 // resources/en/capsule-info.bxb
 capsule-info {
-  display-name (Prepare for the Driving Test)
+  display-name (Road Quiz)
   description (A quiz filled with questions you'll get on your drivers test. Great for practicing!)
   //privacy-policy-url (http://my-capsule.com/en/privacy-policy)
   //terms-url (http://my-capsule.com/en/TandC)
@@ -9,7 +9,7 @@ capsule-info {
     keyword (car)
     keyword (test)
   }
-  dispatch-name (Prepare for Driving Test) //Should be unique enough.
+  dispatch-name (Road Quiz) //Should be unique enough.
   dispatch-aliases {
     alias (Driving exam)
     alias (Drivers test)

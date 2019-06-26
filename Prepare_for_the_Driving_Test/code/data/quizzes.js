@@ -1,7 +1,6 @@
 module.exports = [
   {
     title: "Driving Test",
-    tags: ["funny", "animal"], //use to find quiz.
     questions: [{
         question: "How far ahead should you be looking while driving in town?", //QUESTION 1
         options: ["2 blocks", "1 block", "As far ahead as you can see"],
@@ -73,45 +72,34 @@ module.exports = [
         answer: 0,
       },             
         
-                
-        {
-        question: "On a two-lane undivided highway, the maximum speed limit for vehicles towing trailers is ______ unless otherwise posted.",  //QUESTION 14
-        options: ["55 mph", "65 mph", "60 mph"],
-        answer: 0,
-      },                
-                
+                                           
          {
-        question: "If your parked car rolls away and hits another unattended vehicle, you should",//QUESTION 15
+        question: "If your parked car rolls away and hits another unattended vehicle, you should",//QUESTION 14
         options: ["Report the incident to police", "Remove your car and leave", "Sound your hor to attract attention"],
         answer: 0,
       },    
                 
       {
-        question: "A driver who is involved in a significant collision must report it to the DMV within",//QUESTION 16
+        question: "A driver who is involved in a significant collision must report it to the DMV within",//QUESTION 15
         options: ["15 days", "20 days", "10 days"],
         answer: 2,
       },                  
         
         {
-        question: "What is the first thing you should do during an enforcement stop?",//QUESTION 17
+        question: "What is the first thing you should do during an enforcement stop?",//QUESTION 16
         options: ["Turn on your right turn signal", "Stop on the left shoulder", "Stop on the center median"],
         answer: 0,
       },                
-                
-      {
-        question: "Use __________ steering when correcting a skid.",//QUESTION 18
-        options: ["hand-by-hand", "one-hand", "hand-over-hand"],
-        answer: 2,
-      },             
+                         
   
       {
-        question: "A steady red arrow signal means",//QUESTION 19
+        question: "A steady red arrow signal means",//QUESTION 18
         options: ["You must stop and you cannot turn in the direction of the arrow", "You should prepare to stop and yield to oncoming traffic before turning", "You must stop and then proceed when it is safe."],
         answer: 0,
       },                
                 
          {
-        question: "If you are having vehicle trouble and you need to stop, what is the first thing you should do?",//QUESTION 20
+        question: "If you are having vehicle trouble and you need to stop, what is the first thing you should do?",//QUESTION 19
         options: ["Stop your vehicle over a hill or just around the curve for visibility", "Lift the hood to signal an emergency", "Pull off the road and away from traffic."],
         answer: 0,
       },              
