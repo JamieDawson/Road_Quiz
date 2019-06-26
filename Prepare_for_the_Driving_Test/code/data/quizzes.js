@@ -1,14 +1,14 @@
 module.exports = [
   {
     title: "Driving Test",
-    questions: [{
+    questions: [{ //CHECK BIXBY IS VOICE AFFECTS THIS
         question: "How far ahead should you be looking while driving in town?", //QUESTION 1
-        options: ["2 blocks", "1 block", "As far ahead as you can see"],
+        options: ["two blocks", "one block", "As far ahead as you can see"],
         answer: 1
       },
       {
         question: "If you are convicted for driving under the influence (DUI) while driving a commercial vehicle, and this is your first offense, you will most likely get:", //QUESTION 2
-        options: ["A fine of $500", "Probation for a period of 1 year", "At least one one-year suspension of your CDL"],
+        options: ["A fine of $500", "Probation for one year", "At least one one-year suspension of your CDL"],
         answer: 2,
       },
       {
@@ -21,11 +21,7 @@ module.exports = [
         options: ["Take some caffeine pills", "Drink some coffee", "Get some sleep"],
         answer: 2,
       },
-      {
-        question: "The 'load' means",  //QUESTION 5
-        options: ["Specified pressure a tire can carry", "Maximum safe weight a tire can carry at a specified pressure", "Neither of the above"],
-        answer: 1,
-      },        
+        
       {
         question: "One can recognize hazardous materials by looking at the container's",  //QUESTION 6
         options: ["Color", "Label", "Shape"],
@@ -38,15 +34,9 @@ module.exports = [
       },
       {
         question: "Loads that are over-length, over-width, or overweight may require",  //QUESTION 8
-        options: ["Driving limited to certain times", "Flashing lights", "Both of the above"],
+        options: ["Driving limited to certain times", "Flashing lights", "Both answers above"],
         answer: 2,
       },      
-      {
-        question: "What is the minimum tread depth for front tires?",  //QUESTION 9
-        options: ["1/32 inch", "4/32 inch", "2/32 inch"],
-        answer: 1,
-      },
-  
                 
       {
         question: "Which of the following should you NOT do in the event of hydraulic brake failure?",  //QUESTION 10
@@ -75,7 +65,7 @@ module.exports = [
                                            
          {
         question: "If your parked car rolls away and hits another unattended vehicle, you should",//QUESTION 14
-        options: ["Report the incident to police", "Remove your car and leave", "Sound your hor to attract attention"],
+        options: ["Report the incident to police", "Remove your car and leave", "Sound your horn to attract attention"],
         answer: 0,
       },    
                 
@@ -90,14 +80,7 @@ module.exports = [
         options: ["Turn on your right turn signal", "Stop on the left shoulder", "Stop on the center median"],
         answer: 0,
       },                
-                         
-  
-      {
-        question: "A steady red arrow signal means",//QUESTION 18
-        options: ["You must stop and you cannot turn in the direction of the arrow", "You should prepare to stop and yield to oncoming traffic before turning", "You must stop and then proceed when it is safe."],
-        answer: 0,
-      },                
-                
+                                                   
          {
         question: "If you are having vehicle trouble and you need to stop, what is the first thing you should do?",//QUESTION 19
         options: ["Stop your vehicle over a hill or just around the curve for visibility", "Lift the hood to signal an emergency", "Pull off the road and away from traffic."],
