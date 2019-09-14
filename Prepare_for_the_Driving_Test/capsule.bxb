@@ -1,5 +1,5 @@
 capsule {
-  id (example.quiz) //replace with your capsule id
+  id (jamie_dawson.quiz) //replace with your capsule id
   version (1.0.0)
   format(3)
   targets {
