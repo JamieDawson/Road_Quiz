@@ -10,10 +10,6 @@ capsule-info {
     keyword (test)
   }
   dispatch-name (Road Quiz) //Should be unique enough.
-  dispatch-aliases {
-    alias (Driving exam)
-    alias (Drivers test)
-  }
   action-bg-color (#FFC50A)
   action-fg-color (#443D32)
  // android-app-id () //I don't think I need this.
