@@ -1,85 +1,57 @@
-var console = require ("console")
-var fail = require ("fail")
+const util = require("./lib/util");
 
-// UpdateQuiz - Evaluate user's answer and update the quiz state.
-exports.function = function(state, answer) {
+// Will repromt if the user does not give a valid input. Set to false to not reprompt
+// Futue enhancement would be to reprompt only n times and then give up (suggest n = 1 or 2)
+const reprompt = true;
 
-  if (state.currentQuestion.index >= state.quiz.questions.length) {
-    console.log("Unexpected state!")
-    return state
-  }
+var console = require('console')
 
-  //quiz is completed. nothing to update
-  if (state.completed) {
-    return state
-  }
+module.exports.function = function updateQuiz(quiz, answer) {
 
-  var scoreBook = state.scoreBook
-  if (!state.completed) {
-    //update scoreBook
-    var score = buildScore(state.currentQuestion, answer)
-    if (score.evaluation) {
-      scoreBook.correctAnswerCount += 1
-    }
-    scoreBook.questionsAnsweredCount += 1
-    scoreBook.questionsLeftCount -= 1
-    if (!scoreBook.scores) {
-      scoreBook.scores = [score]
-    } else {
-      scoreBook.scores.push(score)
-    }
+  answer = answer.toLowerCase();
+  const i = quiz.index;
+  const options = quiz.questions[i].options;
+  const hasOptions = !(options === undefined || options.length == 0)
+  const correctAnswers = quiz.questions[i].correctAnswer.acceptedAnswers;
+  const correctAlias = String(quiz.questions[i].correctAnswer.acceptedAlias).toLowerCase();
+  const currentQuestion = quiz.questions[i];
+  quiz.questions[i].answer = answer;
+  quiz.questions[quiz.index].invalidAnswer = false;
+  var correct = false;
+  var answeredOption = false;
 
-    //update state
-    state.lastScore = score
-    state.currentQuestion.index += 1
+  // Check for match with answer option e.g. "California" or "B Calfornia" assuming B was the option letter
+  // Matches answer only and answer in sentence 
+  correct = util.checkAnswerMatch(correctAnswers, answer)
 
-    if (state.currentQuestion.index < state.quiz.questions.length) {
-      state.currentQuestion = state.quiz.questions[state.currentQuestion.index]
-    } else {
-      state.completed = true
+  var possOptionAlias = []
+  if (!correct && hasOptions) { // Check if user answered an incorrect option text, also contruct possible aliases
+    ret = util.checkIncorrectOption(options, answer)
+    answeredOption = ret.answeredOption;
+    possOptionAlias = ret.possOptionAlias
+
+    if (!answeredOption) { // Did user answer with an alias and was the alias correct
+      ret = util.checkAliasMatch(answer, possOptionAlias, correctAlias)
+      answeredOption = ret.answeredOption;
+      correct = ret.correct
     }
   }
-  return state
-}
 
-function buildScore(currentQuestion, answer) {
-  return {
-    question: currentQuestion,
-    answer: unAliasedAnswer(currentQuestion.options, answer),
-    expectedAnswer: getExpectedAnswer(currentQuestion.correctAnswer.acceptedAnswers),
-    evaluation: checkAnswer(currentQuestion.correctAnswer.acceptedAnswers, answer)
+  if (correct) {
+    quiz.questions[quiz.index].correct = true;
+    quiz.score++;
   }
-}
 
-// Check if the answer is correct
-function checkAnswer(acceptedAnswers, answer) {
-   for (var i=0; i<acceptedAnswers.length; i++) {
-     if (acceptedAnswers[i].toLowerCase() == answer.toLowerCase()) {
-       return true
-     }
-   }
-   return false
-}
-
-//return the answer from alias
-function unAliasedAnswer(options, answer) {
-  for (var i=0; i<options.length; i++) {
-    if (answer.toLowerCase() == options[i].alias.toLowerCase()) {
-      return options[i].text
-    }
+  if (!correct && !answeredOption && hasOptions && reprompt) {
+    // Answered with an invalid option. Reprompt
+    quiz.questions[quiz.index].invalidAnswer = true;
+    var validOptionsText = util.arrayToListForSpeech(possOptionAlias)
+    quiz.textToSpeak = util.buildQuestionToSpeak(quiz.questions[quiz.index]) + ". Please answer with a letter: " + validOptionsText || " ";
+  } else if (quiz.index < quiz.questions.length - 1) {
+    quiz.index++;
+    quiz.textToSpeak = util.buildQuestionToSpeak(quiz.questions[quiz.index]) || " ";
+  } else {
+    quiz.completed = true;
   }
-  return answer
-}
-
-//picks the longest answer from the acceptedAnswers list as the expected answer
-function getExpectedAnswer(acceptedAnswers) {
-  var expectedAnswer = ""
-  if (acceptedAnswers) {
-   for (var i=0; i<acceptedAnswers.length; i++) {
-     if (acceptedAnswers[i].length > expectedAnswer.length) {
-       expectedAnswer = acceptedAnswers[i]
-     }
-   }
-  }
-  return expectedAnswer
+  return quiz;
 }

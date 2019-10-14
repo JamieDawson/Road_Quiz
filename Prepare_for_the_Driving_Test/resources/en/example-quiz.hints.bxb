@@ -1,0 +1,7 @@
+hints {
+  uncategorized {
+    hint (With Example Quiz, start a quiz)
+    hint (In Example Quiz, start the president quiz)
+    hint (In Example Quiz, start the funny quiz)
+  }
+}
