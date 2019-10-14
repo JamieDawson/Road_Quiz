@@ -7,7 +7,7 @@ module.exports = [
         answer: 1
       },
       {
-        question: "If you are convicted for driving under the influence (DUI) while driving a commercial vehicle, and this is your first offense, you will most likely get:", //QUESTION 2
+        question: "If you are convicted for driving under the influence (DUI) while driving a commercial vehicle and this is your first offense, you will most likely get:", //QUESTION 2
         options: ["A fine of $500", "Probation for one year", "At least one one-year suspension of your CDL"],
         answer: 2,
       },
