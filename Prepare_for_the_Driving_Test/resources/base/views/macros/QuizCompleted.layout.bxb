@@ -31,9 +31,9 @@ layout-macro-def (QuizCompleted){
                   shape (Circle)
                   url {
                     if (question.correct == true) {
-                      template ("/icons/correct.png")
+                      template ("images/icons/correct.png")
                     } else {
-                      template ("/icons/incorrect.png")
+                      template ("images/icons/incorrect.png")
                     }
                   }
                 }

@@ -1,132 +1,92 @@
 module.exports = [
-  // Start of funny quiz
   {
-    title: "Funny Quiz",
-    tags: ["funny", "animal"], //used to find this quiz
-    image: {
-      url: "/images/Animals.jpeg",
-    },
-    questions: [
-      {
-        question: "What do cats like to eat on a hot day?",
-        options: ["Mice cream", "Ice Cream", "Hot Cream"],
-        answer: 0, // Corresponds to "Mice cream"
+    title: "Driving Test",
+    questions: [{ 
+        question: "How far ahead should you be looking while driving in town?", //QUESTION 1
+        options: ["two blocks", "one block", "As far ahead as you can see"],
+        answer: 1
       },
       {
-        question: "What do you call a cold dog?",
-        options: ["Frozen", "Hot dog", "Chilli Dog"],
-        answer: "Chilli Dog",
-        explanation: "Because it's cold. Get it?",
-      },
-    ],
-  },
-  // End of funny quiz
-
-  // Start of president quiz
-  {
-    title: "President Quiz",
-    tags: ["president", "presidents"], //used to find this quiz
-    image: {
-      url: "/images/Presidents.jpeg",
-    },
-    questions: [
-      {
-        question:
-          "Which president said 'Efforts and courage are not enough without purpose and direction.'?",
-        options: ["Kennedy", "Obama"],
-        answer: 0,
-      },
-      {
-        question:
-          "Which president said 'Men are not prisoners of fate, but only prisoners of their own minds'?",
-        options: ["Hoover", "Roosevelt", "Truman"],
-        answer: [
-          "Roosevelt",
-          "FDR",
-          "Franklin Roosevelt",
-          "Franklin D Roosevelt",
-        ],
-      },
-      {
-        question: "Which president said 'Speak softly, and carry a big stick'?",
-        answer: ["Teddy Roosevelt", "Roosevelt", "Theodore Roosevelt"],
-        explanation:
-          "That famous quote describes Teddy Roosevelt's foreign policy",
-      },
-    ],
-  },
-  // End of presidents quiz
-
-  // Start of states quiz generated from the spreadsheet
-  {
-    title: "States Quiz",
-    tags: ["states", "state", "united states"],
-    image: { url: "/images/us_map.png" },
-    questions: [
-      {
-        question: "Which state has the nickname 'Spud State'?",
-        options: ["Idaho", "Wyoming", "Florida"],
-        answer: "Idaho",
-        explanation:
-          "Idaho is well known for growing potatoes and thus the nickname, Spud State",
-      },
-      {
-        question: "Which state has the nickname 'Peach State'?",
-        options: ["Hawaii", "California", "Georgia"],
+        question: "If you are convicted for driving under the influence (DUI) while driving a commercial vehicle, and this is your first offense, you will most likely get:", //QUESTION 2
+        options: ["A fine of $500", "Probation for one year", "At least one one-year suspension of your CDL"],
         answer: 2,
       },
       {
-        question: "Which state has the nickname 'Silver State'?",
-        options: ["New York", "Montana", "Nevada"],
-        answer: "Nevada",
-        explanation:
-          "Nevada had a silver rush in the mid 1800's and thus has the nickname, Silver State",
-      },
+        question: "If the vehicle in front of you is smaller than yours, it can probably", //QUESTION 3
+        options: ["Stop faster than you", "Outrun you", "Make turns faster than you"],
+        answer: 0,
+      },          
       {
-        question: "What state is known as the Land of 10,000 lakes?",
-        options: ["Wisconsin", "Louisiana", "Minnesota"],
-        answer: "Minnesota",
-        explanation:
-          "Minnesota has over 11,000 lakes, so the land of 10,000 lakes is under counting!",
+        question: "What should you do before driving if you are sleepy?",  //QUESTIOn 4
+        options: ["Take some caffeine pills", "Drink some coffee", "Get some sleep"],
+        answer: 2,
       },
+        
       {
-        question: "What state is the largest in area?",
-        options: ["California", "Alaska", "Texas"],
+        question: "One can recognize hazardous materials by looking at the container's",  //QUESTION 6
+        options: ["Color", "Label", "Shape"],
         answer: 1,
-        explanation:
-          "Alaska is the largest state by far with 665,384 square miles. Second place Texas has 268,596 square miles and third place California has 163,694 square miles",
       },
       {
-        question: "What state is the largest agricultural producer?",
-        options: ["Iowa", "Kansas", "California"],
-        answer: "California",
-        explanation:
-          "Caifornia produces over 11% of the nation's agricultural output followed by #2 Iowa which produces over 8%.",
+        question: "Which of these can cause the vehicle to skid?",  //QUESTION 7
+        options: ["Overacceleration", "Not enough weight on front axle", "Both of the above"],
+        answer: 2,
       },
       {
-        question: "Which of the following states does not have a panhandle?",
-        options: ["Idaho", "Florida", "New Mexico"],
-        answer: "New Mexico",
-      },
+        question: "Loads that are over-length, over-width, or overweight may require",  //QUESTION 8
+        options: ["Driving limited to certain times", "Flashing lights", "Both answers above"],
+        answer: 2,
+      },      
+                
       {
-        question: "Which state does not border the Great Lakes?",
-        options: ["Ohio", "Michigan", "Iowa"],
-        answer: "Iowa",
-      },
+        question: "Which of the following should you NOT do in the event of hydraulic brake failure?",  //QUESTION 10
+        options: ["Shift up", "Use parking or emergency break", "Pump the breaks"],
+        answer: 0,
+      },  
+    
+        {
+        question: "When two vehicles meet on a steep mountain road where neither can pass, which vehicle has the right-of-way?",  //QUESTION 11
+        options: ["The vehicle traveling downhill", "The vehicle traveling uphill", "Both vehicles"],
+        answer: 1,
+      },              
+                
+        {
+        question: "At an unmarked crosswalk, you must",  //QUESTION 12
+        options: ["Increase your speed and cross before the pedestrians", "yield the right-of-way to pedestrians", "Stop and ask pedestrains to cross quickly"],
+        answer: 1,
+      },   
+                
       {
-        question: "What is the smallest US state?",
-        options: ["Delaware", "Rhode Island", "Connecticut"],
-        answer: "Rhode Island",
-        explanation:
-          "Rhode Island is the smallest US state at 1,045 square miles. The next smallest is Delaware which at 1,954 square miles is almost twice the size of Rhode Island",
-      },
+        question: "A traffic signal with a flashing yellow arrow means that you should",  //QUESTION 13
+        options: ["Yield and then proceed with caution", "Stop and prepare to obey the next signal", "Proceed with caution but turns are not permitted in the direction of the arrow"],
+        answer: 0,
+      },             
+        
+                                           
+         {
+        question: "If your parked car rolls away and hits another unattended vehicle, you should",//QUESTION 14
+        options: ["Report the incident to police", "Remove your car and leave", "Sound your horn to attract attention"],
+        answer: 0,
+      },    
+                
       {
-        question: "How many states are prefixed with 'New'?",
-        answer: ["four", "4"],
-        explanation:
-          "There are four states prefixed by 'New': New Hampshire, New Jersey, New Mexico and New York",
-      },
-    ],
+        question: "A driver who is involved in a significant collision must report it to the DMV within",//QUESTION 15
+        options: ["15 days", "20 days", "10 days"],
+        answer: 2,
+      },                  
+        
+        {
+        question: "What is the first thing you should do during an enforcement stop?",//QUESTION 16
+        options: ["Turn on your right turn signal", "Stop on the left shoulder", "Stop on the center median"],
+        answer: 0,
+      },                
+                                                   
+         {
+        question: "If you are having vehicle trouble and you need to stop, what is the first thing you should do?",//QUESTION 19
+        options: ["Stop your vehicle over a hill or just around the curve for visibility", "Lift the hood to signal an emergency", "Pull off the road and away from traffic."],
+        answer: 0,
+      },              
+                
+    ]
   },
-  // End of States quiz
-];
+]

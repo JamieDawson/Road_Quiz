@@ -1,7 +1,7 @@
 hints {
   uncategorized {
-    hint (With Example Quiz, start a quiz)
-    hint (In Example Quiz, start the president quiz)
-    hint (In Example Quiz, start the funny quiz)
+    hint ("With Road Quiz, Start the exam")
+    hint ("In Road Quiz, Let's begin the exam")
+    hint ("In Road Quiz, I would like to start the exam")
   }
 }

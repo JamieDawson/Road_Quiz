@@ -1,11 +1,16 @@
 capsule-info {
-  display-name (Example Quiz)
-  developer-name (Viv Labs, Inc.)
-  icon-asset (icons/correct.png)
-  description ("An example capsule that demonstrates how to build a quiz")
-  website-url (https://bixbydevelopers.com/)
-  search-keywords{
-    keyword (quiz)
+
+  display-name (Road Quiz)
+  description (A quiz filled with questions you'll get on your drivers test. Great for practicing!)
+  search-keywords {
+    keyword (driving)
+    keyword (car)
+    keyword (test)
   }
-  dispatch-name (Example Quiz)
+  dispatch-name (Road Quiz) 
+  action-bg-color (#FFC50A)
+  action-fg-color (#443D32)
+
+  developer-name (Jamie Dawson)
+  icon-asset (images/icon_for_app/iconForTest.png)
 }
